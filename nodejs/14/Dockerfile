@@ -3,7 +3,7 @@ FROM 		node:14-buster-slim
 LABEL 		author="Jpuf" maintainer="Jpuf@Jpuf.xyz"
 
 RUN 		apt update \
-			&& apt -y install ffmpeg iproute2 git sqlite3 libsqlite3-dev python3-dev ca-certificates dnsutils tzdata zip g++ make \
+			&& apt -y install ffmpeg iproute2 git sqlite3 libsqlite3-dev python3-dev ca-certificates dnsutils tzdata zip g++ make glibc \
 			&& npm install -g node-gyp \
 			&& useradd -m -d /home/container container
 
