@@ -1,15 +1,15 @@
 FROM 		node:14-buster-slim
 
-LABLE 		author="Jpuf" maintainer="Jpuf@Jpuf.xyz"
+LABEL 		author="Jpuf" maintainer="Jpuf@Jpuf.xyz"
 
 RUN 		apt update \
-		&& apt -y install ffmpeg iproute2 git sqlite3 libsqlite3-dev python3-dev ca-certificates dnsutils tzdata zip g++ make \
-		&& npm install -g node-gyp \
-		&& useradd -m -d /home/container container
+			&& apt -y install ffmpeg iproute2 git sqlite3 libsqlite3-dev python3-dev ca-certificates dnsutils tzdata zip g++ make \
+			&& npm install -g node-gyp \
+			&& useradd -m -d /home/container container
 
 USER 		container
-ENV		USER=container HOME=/home/container
+ENV			USER=container HOME=/home/container
 WORKDIR		/home/container
 
 COPY		./../entrypoint.sh /entrypoint.sh
-CMD		["/bin/bash", "/entrypoint.sh"]
+CMD			["/bin/bash", "/entrypoint.sh"]
