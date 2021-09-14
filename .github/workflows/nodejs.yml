@@ -34,4 +34,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/parkervcp/yolks:nodejs_${{ matrix.tag }}
+            ghcr.io/jpuf0/yolks:nodejs_${{ matrix.tag }}
