@@ -17,6 +17,7 @@ jobs:
       matrix:
         tag:
           - 14
+          - 16
     steps:
       - uses: actions/checkout@v2
       - uses: docker/setup-buildx-action@v1
