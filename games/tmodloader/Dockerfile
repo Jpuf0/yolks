@@ -23,7 +23,7 @@ RUN         apt install -y libc6-i386
 RUN         apt install -y libcurl4-gnutls-dev:i386
 RUN         apt install -y libsdl2-2.0-0:i386
 
-RUN         apt-get install -y steamcmd
+RUN         apt install -y steamcmd
 
 USER        container
 ENV         USER=container HOME=/home/container
