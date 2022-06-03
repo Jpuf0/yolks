@@ -16,7 +16,8 @@ RUN         apt update -y \
 RUN         sed -i "/^# deb.*multiverse/ s/^# //" /etc/apt/sources.list
 #RUN         dpkg --add-architecture i386 -y 
 RUN         apt update 
-RUN         apt install -y lib32gcc-s1 steamcmd
+RUN         apt install -y lib32gcc-s1
+RUN         apt install -y steamcmd
 
 USER        container
 ENV         USER=container HOME=/home/container
