@@ -15,7 +15,7 @@ RUN         apt update -y \
             
 RUN         add-apt-repository multiverse -y
 RUN         dpkg --add-architecture i386 -y \
-            && apt update
+            && apt update \
             && apt install -y lib32gcc-s1 steamcmd
 
 USER        container
