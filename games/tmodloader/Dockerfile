@@ -13,7 +13,7 @@ RUN         apt update -y \
             && apt update -y \
             && apt install -y aspnetcore-runtime-6.0 libgdiplus  
             
-RUN         add-apt-repository multiverse -y
+RUN         sed -i "/^# deb.*multiverse/ s/^# //" /etc/apt/sources.list
 RUN         dpkg --add-architecture i386 -y \
             && apt update \
             && apt install -y lib32gcc-s1 steamcmd
