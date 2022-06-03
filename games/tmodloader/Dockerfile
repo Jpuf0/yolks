@@ -18,7 +18,6 @@ RUN         apt install dpkg -y
 RUN         dpkg --add-architecture i386
 RUN         apt update 
 RUN         apt install -y lib32gcc-s1    
-RUN         apt install -y lib32gcc1
 RUN         apt install -y lib32stdc++6 
 RUN         apt install -y libc6-i386
 RUN         apt install -y libcurl4-gnutls-dev:i386
